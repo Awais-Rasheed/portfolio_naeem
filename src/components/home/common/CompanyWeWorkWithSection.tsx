@@ -6,15 +6,15 @@ interface CompanyLogo {
 }
 
 const companyLogos: CompanyLogo[] = [
-  { name: "Azurise", src: "/images/brands/azurise.png" },
-  { name: "Tulvera", src: "/images/brands/tulvera.png" },
-  { name: "DNVB Shop", src: "/images/brands/dnvb.png" },
-  { name: "Purity Crystalline", src: "/images/brands/purity-crystalline.png" },
-  { name: "Nuvó", src: "/images/brands/novo.png" },
+  { name: "Azurise", src: "/images/brands/AZURISE.png" },
+  { name: "Tulvera", src: "/images/brands/Tulvera.png" },
+  { name: "DNVB Shop", src: "/images/brands/DNVB.png" },
+  { name: "Purity Crystalline", src: "/images/brands/Purity-Crystalline.png" },
+  { name: "Nuvó", src: "/images/brands/NOVO.png" },
   { name: "Falcon Home", src: "/images/brands/falcon.png" },
   { name: "Aurame", src: "/images/brands/arome.png" },
-  { name: "Fashion Bee", src: "/images/brands/fusion.png" },
-  { name: "Atlas Essentials", src: "/images/brands/atlas-essentials.png" },
+  { name: "Fashion Bee", src: "/images/brands/Fusion.png" },
+  { name: "Atlas Essentials", src: "/images/brands/Atlas-Essentials.png" },
 ];
 
 export default function CompanyWeWorkWithSection() {
