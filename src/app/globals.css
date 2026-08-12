@@ -1,0 +1,367 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS  (Tailwind v4 theme layer)
+   ============================================================ */
+
+@theme inline {
+
+  /* ── Fonts ── */
+  --font-sans:    var(--font-inter), sans-serif;
+  --font-display: var(--font-instrument), sans-serif;
+
+  /* ── Primary Palette (60 %) ── */
+  --color-primary:       #001D60;   /* main brand blue         */
+  --color-primary-dark:  #020612;   /* near-black navy         */
+  --color-primary-light: #F7F8FB;   /* off-white background    */
+
+  /* ── Secondary / Text Palette (30 %) ── */
+  --color-text-primary:       #0C0C0C;   /* primary text            */
+  --color-text-secondary:     #5B5D60;   /* secondary / muted text  */
+  --color-text-white:         #FFFFFF;   /* white text              */
+  --color-text-blue:          #001A56;   /* deep blue text          */
+  --color-text-blue-light:    #0E3388;   /* lighter blue text       */
+
+  /* ── Accent Palette (10 %) ── */
+  --color-accent-silver:  #E8E8E8;   /* "Get Started" bg        */
+  --color-accent-slate:   #687185;   /* "Build Your Success"    */
+  --color-accent-muted:   #D9D9D9;   /* "View all" bg           */
+
+  /* ── Button Hover States ── */
+  --color-btn-hover-dark:     #000000;
+  --color-btn-hover-primary:  #001D60;
+  --color-btn-hover-deep:     #001138;
+
+  /* ── Cards / Icons ── */
+  --color-card-hover: #001D60;
+  --color-icon-bg:    #FFFFFF;
+
+  /* ── Semantic aliases ── */
+  --color-background: var(--color-primary-light);
+  --color-foreground: var(--color-text-primary);
+
+  /* ── Typography scale ── */
+
+  /* Display – Hero titles  52 / 1.1 / weight 338 (approx. light-medium) */
+  --text-display: 52px;
+  --text-display--line-height: 1.1;
+  --text-display--font-weight: 700;   /* Inter closest to 338 */
+
+  /* H1 – Section headings  42 / 51 */
+  --text-h1:              42px;
+  --text-h1--line-height: 51px;
+  --text-h1--font-weight: 700;
+
+  /* body1  22 / 27 */
+  --text-body1:              22px;
+  --text-body1--line-height: 27px;
+  --text-body1--font-weight: 400;
+
+  /* body2  20 / 24 */
+  --text-body2:              20px;
+  --text-body2--line-height: 24px;
+  --text-body2--font-weight: 400;
+
+  /* Card title large  48 / 59 */
+  --text-card-title-lg:              48px;
+  --text-card-title-lg--line-height: 59px;
+  --text-card-title-lg--font-weight: 700;
+
+  /* Card title normal  24 / 29 */
+  --text-card-title:              24px;
+  --text-card-title--line-height: 29px;
+  --text-card-title--font-weight: 600;
+
+  /* Caption lg  18 / 22 */
+  --text-caption-lg:              18px;
+  --text-caption-lg--line-height: 22px;
+
+  /* Caption  16 / 20 */
+  --text-caption:              16px;
+  --text-caption--line-height: 20px;
+
+  /* Caption sm  12 / 15 */
+  --text-caption-sm:              12px;
+  --text-caption-sm--line-height: 15px;
+
+  /* Overline  24 / 29 */
+  --text-overline:              24px;
+  --text-overline--line-height: 29px;
+  --text-overline--font-weight: 600;
+
+  /* Overline sm  12 / 15 */
+  --text-overline-sm:              12px;
+  --text-overline-sm--line-height: 15px;
+
+  /* ── Gradient presets ── */
+  --background-image-primary-gradient:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.03)   17.40%,
+      rgba(8,49,255,0.03) 28.73%,
+      rgba(0,0,0,0.03)   35.39%,
+      rgba(0,0,0,0.03)   52.90%,
+      rgba(0,21,255,0.03) 65.40%,
+      rgba(0,0,0,0.03)   86.07%
+    );
+
+  --background-image-blue-gradient:
+    linear-gradient(180deg, #001D60 0%, #020612 100%);
+}
+
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+
+/* ============================================================
+   TYPOGRAPHY UTILITY CLASSES
+   Use these instead of hard-coding font-size / line-height.
+   ============================================================ */
+
+/* ── Display (Hero) ──────────────────────────────────── */
+.text-display {
+  font-family: var(--font-display) !important;
+  font-size:   var(--text-display);
+  line-height: var(--text-display--line-height);
+  font-weight: var(--text-display--font-weight, 700);
+}
+
+/* ── H1 ─────────────────────────────────────────────── */
+.text-h1 {
+  font-size:   var(--text-h1);
+  line-height: var(--text-h1--line-height);
+  font-weight: var(--text-h1--font-weight, 700);
+}
+
+/* ── Body ───────────────────────────────────────────── */
+.text-body1 {
+  font-size:   var(--text-body1);
+  line-height: var(--text-body1--line-height);
+  font-weight: var(--text-body1--font-weight, 400);
+}
+
+.text-body2 {
+  font-size:   var(--text-body2);
+  line-height: var(--text-body2--line-height);
+  font-weight: var(--text-body2--font-weight, 400);
+}
+
+/* ── Card Titles ────────────────────────────────────── */
+.text-card-title-lg {
+  font-size:   var(--text-card-title-lg);
+  line-height: var(--text-card-title-lg--line-height);
+  font-weight: var(--text-card-title-lg--font-weight, 700);
+}
+
+.text-card-title {
+  font-size:   var(--text-card-title);
+  line-height: var(--text-card-title--line-height);
+  font-weight: var(--text-card-title--font-weight, 600);
+}
+
+/* ── Captions ───────────────────────────────────────── */
+.text-caption-lg {
+  font-size:   var(--text-caption-lg);
+  line-height: var(--text-caption-lg--line-height);
+}
+
+.text-caption {
+  font-size:   var(--text-caption);
+  line-height: var(--text-caption--line-height);
+}
+
+.text-caption-sm {
+  font-size:   var(--text-caption-sm);
+  line-height: var(--text-caption-sm--line-height);
+}
+
+/* ── Overlines ──────────────────────────────────────── */
+.text-overline {
+  font-size:      var(--text-overline);
+  line-height:    var(--text-overline--line-height);
+  font-weight:    var(--text-overline--font-weight, 600);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-overline-sm {
+  font-size:      var(--text-overline-sm);
+  line-height:    var(--text-overline-sm--line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   COLOR UTILITY CLASSES
+   Semantic aliases so components never hard-code hex values.
+   ============================================================ */
+
+/* Backgrounds */
+.bg-primary          { background-color: var(--color-primary); }
+.bg-primary-dark     { background-color: var(--color-primary-dark); }
+.bg-primary-light    { background-color: var(--color-primary-light); }
+.bg-accent-silver    { background-color: var(--color-accent-silver); }
+.bg-accent-slate     { background-color: var(--color-accent-slate); }
+.bg-accent-muted     { background-color: var(--color-accent-muted); }
+
+/* Text colors */
+.text-primary        { color: var(--color-primary); }
+.text-primary-dark   { color: var(--color-primary-dark); }
+.text-primary-light  { color: var(--color-primary-light); }
+.text-txt-primary    { color: var(--color-text-primary); }
+.text-txt-secondary  { color: var(--color-text-secondary); }
+/* Full white — opaque. For semi-transparent white, use Tailwind's text-white/N
+   (e.g. text-white/85, text-white/70) — do NOT write text-txt-white/N as
+   Tailwind opacity modifiers only work with its own utility classes. */
+.text-txt-white      { color: var(--color-text-white); }
+/* Named opacity helpers — avoid needing the /N syntax on custom classes */
+.text-txt-white-90   { color: rgba(255,255,255,0.90); }
+.text-txt-white-85   { color: rgba(255,255,255,0.85); }
+.text-txt-white-70   { color: rgba(255,255,255,0.70); }
+.text-txt-white-40   { color: rgba(255,255,255,0.40); }
+.text-txt-blue       { color: var(--color-text-blue); }
+.text-txt-blue-light { color: var(--color-text-blue-light); }
+
+/* NOTE: bg-primary-gradient is a SUBTLE SHIMMER OVERLAY (0.03 opacity).
+   It only sets background-image – always pair it with a background-color class
+   (e.g. bg-primary, bg-primary-light) so the solid color shows through. */
+.bg-primary-gradient { background-image: var(--background-image-primary-gradient); }
+
+/* bg-blue-gradient is a full opaque gradient – can be used as a standalone background. */
+.bg-blue-gradient    { background-image: var(--background-image-blue-gradient); }
+
+
+/* ============================================================
+   BUTTON CLASSES
+   Keeps button colours and hover states in one place.
+   ============================================================ */
+
+/* ── Get Started ── silver pill */
+.btn-get-started {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  border-radius:    9999px;
+  background-color: var(--color-accent-silver);
+  color:            var(--color-text-primary);
+  font-family:      var(--font-sans);
+  font-size:        var(--text-caption);
+  font-weight:      600;
+  line-height:      var(--text-caption--line-height);
+  padding:          0 2rem;
+  height:           47px;
+  transition:       background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-get-started:hover {
+  background-color: var(--color-btn-hover-dark);
+  color:            var(--color-text-white);
+}
+
+/* ── Build Your Success Story ── slate pill */
+.btn-success-story {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  border-radius:    9999px;
+  background-color: var(--color-accent-slate);
+  color:            var(--color-text-white);
+  font-family:      var(--font-sans);
+  font-size:        var(--text-body2);
+  font-weight:      600;
+  line-height:      var(--text-body2--line-height);
+  padding:          0.6rem 1.5rem;
+  transition:       background-color 0.2s, box-shadow 0.2s;
+}
+.btn-success-story:hover {
+  background-color: var(--color-btn-hover-dark);
+}
+
+/* ── Book Free Call ── primary blue pill */
+.btn-book-call {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  gap:              0.5rem;
+  border-radius:    9999px;
+  background-color: var(--color-primary);
+  color:            var(--color-text-white);
+  font-family:      var(--font-sans);
+  font-size:        var(--text-body2);
+  font-weight:      600;
+  line-height:      var(--text-body2--line-height);
+  padding:          0.75rem 1.75rem;
+  transition:       background-color 0.2s, box-shadow 0.2s;
+}
+.btn-book-call:hover {
+  background-color: var(--color-btn-hover-deep);
+}
+
+/* ── View All ── light muted pill */
+.btn-view-all {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  border-radius:    9999px;
+  background-color: var(--color-accent-muted);
+  color:            var(--color-text-primary);
+  font-family:      var(--font-sans);
+  font-size:        var(--text-caption);
+  font-weight:      600;
+  line-height:      var(--text-caption--line-height);
+  padding:          0.5rem 1.5rem;
+  transition:       background-color 0.2s;
+}
+.btn-view-all:hover {
+  background-color: var(--color-btn-hover-primary);
+  color:            var(--color-text-white);
+}
+
+
+/* ============================================================
+   CARD CLASSES
+   ============================================================ */
+
+/* White card with glass-morphism hover */
+.card-white {
+  background-color: var(--color-text-white);
+  border-radius:    0.75rem;
+  box-shadow:       0 4px 16px rgba(0,0,0,0.08);
+  transition:       box-shadow 0.25s, border-color 0.25s;
+  border:           1px solid transparent;
+}
+.card-white:hover {
+  border-color: var(--color-card-hover);
+  box-shadow:   0 8px 32px rgba(0,29,96,0.18);
+}
+
+/* Glass card (dark sections) */
+.card-glass {
+  background:    rgba(255,255,255,0.1);
+  backdrop-filter: blur(18px);
+  border-radius: 0.75rem;
+  border:        1px solid rgba(255,255,255,0.12);
+  transition:    background 0.25s, border-color 0.25s;
+}
+.card-glass:hover {
+  background:   rgba(0,29,96,0.35);
+  border-color: var(--color-card-hover);
+  backdrop-filter: blur(18px);
+  border-radius: 0.75rem;
+  border:        1px solid rgba(255,255,255,0.12);
+  background:    rgba(255,255,255,0.2);
+}
