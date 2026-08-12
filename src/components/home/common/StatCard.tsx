@@ -21,13 +21,13 @@ export const caseStudyGroups: CaseStudyGroup[] = [
         index: "/01",
         value: "$1M+",
         label: "Ads Spent",
-        icon: "/images/png/ads.png",
+        icon: "/images/png/Ads.png",
       },
       {
         index: "/02",
         value: "$10M+",
         label: "Sales Generated",
-        icon: "/images/png/sales.png",
+        icon: "/images/png/Sales.png",
       },
       {
         index: "/03",
