@@ -47,7 +47,7 @@ const serviceCards: ServiceCardData[] = [
 
 export default function ServicesGridSection() {
   return (
-    <section className="relative w-full bg-[#00071C] px-6 py-16 sm:px-10 lg:px-16 overflow-hidden">
+    <section className="relative w-full bg-[#00071C] bg-blue-gradient px-6 py-16 sm:px-10 lg:px-16 overflow-hidden">
       {/* Background ambient radial glows */}
       <div className="pointer-events-none absolute -left-20 top-1/4 h-[500px] w-[500px] rounded-full bg-[#0E3388] opacity-35 blur-[140px]" />
       <div className="pointer-events-none absolute -right-20 bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#0E2055] opacity-30 blur-[140px]" />

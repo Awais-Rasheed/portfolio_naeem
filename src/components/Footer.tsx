@@ -32,7 +32,7 @@ const contactLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-primary-dark text-txt-white">
+    <footer className="relative overflow-hidden bg-primary-dark bg-blue-gradient text-txt-white">
       {/* Subtle blue-band overlay */}
       <div className="pointer-events-none absolute inset-0 bg-primary-gradient" />
       <div className="pointer-events-none absolute -left-20 bottom-[-250px] h-[500px] w-[700px] rounded-full bg-blue-900/70 blur-[130px]" />

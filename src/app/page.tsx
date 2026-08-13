@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative w-full overflow-hidden bg-primary-dark">
+      <section className="relative w-full overflow-hidden bg-primary-dark bg-blue-gradient">
         {/* Background glow layers */}
         <div className="pointer-events-none absolute inset-0">
           {/* Base deep-blue gradient */}

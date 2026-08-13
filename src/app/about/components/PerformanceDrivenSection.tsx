@@ -267,7 +267,7 @@ function PerformanceChart() {
 
 export default function PerformanceDrivenSection() {
   return (
-    <section className="mb-20 relative w-full bg-[#00081F] px-6 py-16 sm:px-12 lg:px-16">
+    <section className="mb-20 relative w-full bg-[#00081F] bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16">
       <div className="pointer-events-none absolute -left-20 top-1/3 h-[400px] w-[500px] rounded-full bg-[#0E3388] opacity-30 blur-[120px]" />
 
       <div className="relative z-10 mx-auto grid max-w-[1300px] gap-10 grid-cols-1 lg:grid-cols-[1fr_1.15fr]">

@@ -242,8 +242,25 @@ body {
    (e.g. bg-primary, bg-primary-light) so the solid color shows through. */
 .bg-primary-gradient { background-image: var(--background-image-primary-gradient); }
 
-/* bg-blue-gradient is a full opaque gradient – can be used as a standalone background. */
-.bg-blue-gradient    { background-image: var(--background-image-blue-gradient); }
+/* bg-blue-gradient applies the custom blue background image with subtle opacity overlay. */
+.bg-blue-gradient {
+  position: relative;
+  background-color: var(--color-primary-dark);
+  isolation: isolate;
+}
+
+.bg-blue-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/png/blue bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
 
 
 /* ============================================================

@@ -28,7 +28,7 @@ export default function ScaleWithPrimeA2Z() {
         </div>
 
         {/* ── Dark banner section ── */}
-        <div className="relative max-w-[90%] right-[-10%] bg-primary">
+        <div className="relative max-w-[90%] right-[-10%] bg-primary bg-blue-gradient">
           <div
             className="pointer-events-none absolute inset-0"
             style={{
@@ -106,7 +106,7 @@ export default function ScaleWithPrimeA2Z() {
         </div>
 
         {/* Mobile Dark Banner Card */}
-        <div className="relative w-full bg-primary rounded-3xl overflow-hidden px-6 py-8 sm:px-8 sm:py-10 shadow-xl my-6">
+        <div className="relative w-full bg-primary bg-blue-gradient rounded-3xl overflow-hidden px-6 py-8 sm:px-8 sm:py-10 shadow-xl my-6">
           <div className="pointer-events-none absolute -bottom-20 -right-20 h-[300px] w-[300px] rounded-full bg-txt-blue-light opacity-50 blur-[90px]" />
 
           <div className="relative z-10 w-full text-center space-y-6">

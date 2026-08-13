@@ -7,11 +7,7 @@ export default function SuccessStories() {
   return (
     <>
       <section
-        className="mb-30 relative w-full overflow-hidden bg-primary px-6 py-16 sm:px-12 lg:px-16"
-        style={{
-          backgroundImage:
-            "linear-gradient(180deg,rgba(0,0,0,0.03) 17.4%,rgba(8,49,255,0.06) 28.73%,rgba(0,0,0,0.03) 35.39%,rgba(0,0,0,0.03) 52.9%,rgba(0,21,255,0.06) 65.4%,rgba(0,0,0,0.03) 86.07%)",
-        }}
+        className="mb-30 relative w-full overflow-hidden bg-primary bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16"
       >
         <div className="pointer-events-none absolute -right-20 top-10 h-[400px] w-[500px] rounded-full bg-txt-blue-light opacity-40 blur-[110px]" />
 
@@ -32,10 +28,12 @@ export default function SuccessStories() {
         </div>
       </section>
 
-      <div className="relative w-full overflow-hidden bg-[#001233] px-6 py-16 sm:px-12 lg:px-16">
-        {caseStudyGroups.map((group) => (
-          <CaseStudyRow key={group.category} group={group} />
-        ))}
+      <div className="relative w-full overflow-hidden bg-[#001233] bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16">
+        <div className="relative z-10">
+          {caseStudyGroups.map((group) => (
+            <CaseStudyRow key={group.category} group={group} />
+          ))}
+        </div>
       </div>
 
       <GrowthSection />

@@ -75,7 +75,7 @@ export default function PageHero({
   };
 
   return (
-    <section className="relative overflow-hidden bg-primary-dark min-h-[420px] lg:min-h-[480px] flex items-center">
+    <section className="relative overflow-hidden bg-primary-dark bg-blue-gradient min-h-[420px] lg:min-h-[480px] flex items-center">
       {/* Background glow layers & optional image */}
       <div className="pointer-events-none absolute inset-0">
         {/* Default deep-blue background when no background image */}

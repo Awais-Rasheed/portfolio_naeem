@@ -53,7 +53,7 @@ export default function FAQSection() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="mb-20 mt-30 relative w-full overflow-hidden bg-primary-dark py-20 px-6 sm:px-12 lg:px-16">
+    <section className="mb-20 mt-30 relative w-full overflow-hidden bg-primary-dark bg-blue-gradient py-20 px-6 sm:px-12 lg:px-16">
       {/* Background glow blobs */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-120px] top-[-80px] h-[500px] w-[500px] rounded-full bg-[#0E3388] opacity-30 blur-[130px]" />

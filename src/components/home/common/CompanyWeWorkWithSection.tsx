@@ -23,7 +23,7 @@ export default function CompanyWeWorkWithSection() {
       {/* subtle top border accent */}
       <div className="absolute inset-x-0 top-0 h-[2px] bg-txt-white/80" />
 
-      <div className="mx-auto max-w-[1300px] flex flex-wrap justify-center gap-y-8 gap-x-4">
+      <div className="relative z-10 mx-auto max-w-[1300px] flex flex-wrap justify-center gap-y-8 gap-x-4">
         {companyLogos.map((logo) => (
           <div
             key={logo.name}

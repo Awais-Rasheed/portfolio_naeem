@@ -243,7 +243,7 @@ function MapPanel() {
 
 export default function ContactUsSection() {
   return (
-    <section className="relative w-full bg-[#00081F] px-6 py-16 sm:px-12 lg:px-16">
+    <section className="relative w-full bg-[#00081F] bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16">
       <div className="pointer-events-none absolute -right-20 top-0 h-[400px] w-[500px] rounded-full bg-[#0E3388] opacity-30 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-[1200px]">

@@ -37,7 +37,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed z-50 left-0 right-0 mx-auto top-[16px] sm:top-[20px] lg:top-[38px] w-[calc(100%-1.5rem)] sm:w-[95%] lg:w-[1251px] max-w-[1251px] h-auto lg:h-[93px] border-[0.1px] border-[#D9D9D9] bg-white/90 lg:bg-primary-light/20 backdrop-blur-md lg:backdrop-blur-lg rounded-[28px] sm:rounded-[56px] flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-0 transition-all duration-300 shadow-sm">
+      <header className="absolute z-50 left-0 right-0 mx-auto top-[16px] sm:top-[20px] lg:top-[38px] w-[calc(100%-1.5rem)] sm:w-[95%] lg:w-[1251px] max-w-[1251px] h-auto lg:h-[93px] border-[0.1px] border-[#D9D9D9] bg-white/90 lg:bg-primary-light/20 backdrop-blur-md lg:backdrop-blur-lg rounded-[28px] sm:rounded-[56px] flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-0 transition-all duration-300 shadow-sm">
         {/* Logo Container */}
         <Link
           href="/"
@@ -61,12 +61,12 @@ export default function Header() {
                 <div className="flex items-center gap-1 cursor-pointer py-4">
                   <Link
                     href={link.href}
-                    className="font-sans font-semibold text-caption-lg leading-none text-txt-primary hover:text-primary transition-colors"
+                    className="font-sans font-semibold text-caption-lg leading-none text-white hover:text-white/80 transition-colors"
                   >
                     {link.name}
                   </Link>
                   <svg
-                    className="w-4 h-4 text-[black] group-hover:text-primary transition-colors"
+                    className="w-4 h-4 text-white group-hover:text-white/80 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -83,7 +83,7 @@ export default function Header() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="px-5 py-3 text-caption font-sans font-medium text-txt-primary hover:text-white hover:bg-blue-gradient transition-colors"
+                        className="px-5 py-3 text-caption font-sans font-medium text-txt-primary hover:text-white hover:bg-primary transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -93,7 +93,7 @@ export default function Header() {
               ) : (
                 <Link
                   href={link.href}
-                  className="font-sans font-semibold text-caption-lg leading-none text-txt-primary hover:text-primary transition-colors py-4"
+                  className="font-sans font-semibold text-caption-lg leading-none text-white hover:text-white/80 transition-colors py-4"
                 >
                   {link.name}
                 </Link>
@@ -112,7 +112,7 @@ export default function Header() {
           {/* Mobile Hamburger Toggle Button */}
           <button
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden p-2 text-primary hover:bg-primary-light/80 rounded-full transition-colors flex items-center justify-center shrink-0"
+            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors flex items-center justify-center shrink-0"
             aria-label="Open Menu"
           >
             <svg

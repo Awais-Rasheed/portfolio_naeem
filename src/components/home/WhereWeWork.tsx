@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function WhereWeWork() {
   return (
-    <section className="relative w-full overflow-hidden bg-primary-dark mb-30">
+    <section className="relative w-full overflow-hidden bg-primary-dark bg-blue-gradient mb-30">
       {/* Subtle blue-band overlay */}
       <div className="pointer-events-none absolute inset-0 bg-primary-gradient" />
 
-      <div className="mx-auto max-w-[1440px] px-6 py-8 sm:px-10 lg:px-14">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-8 sm:px-10 lg:px-14">
         {/* Heading */}
         <h2 className="text-center text-h1 font-sans font-bold text-txt-white">
           Where We Work

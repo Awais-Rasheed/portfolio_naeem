@@ -88,8 +88,8 @@ function FeatureCardItem({ card }: { card: FeatureCard }) {
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="relative w-full bg-[#00081F] px-6 py-16 sm:px-12 lg:px-16">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-6 sm:grid-cols-3">
+    <section className="relative w-full bg-[#00081F] bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16">
+      <div className="relative z-10 mx-auto grid max-w-[1100px] grid-cols-1 gap-6 sm:grid-cols-3">
         {featureCards.map((card) => (
           <FeatureCardItem key={card.title} card={card} />
         ))}
