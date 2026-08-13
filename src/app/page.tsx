@@ -51,6 +51,7 @@ export default function Home() {
             width={800}
             height={600}
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 800px"
             className="h-auto w-full object-contain object-bottom"
           />
         </div>

@@ -97,10 +97,11 @@ export default function PageHero({
                   typeof backgroundImageOpacity === "number"
                     ? backgroundImageOpacity
                     : typeof backgroundImageOpacity === "string"
-                    ? parseFloat(backgroundImageOpacity) || 1
-                    : typeof backgroundImageOpacity === "boolean" && backgroundImageOpacity
-                    ? 0.5
-                    : 1,
+                      ? parseFloat(backgroundImageOpacity) || 1
+                      : typeof backgroundImageOpacity === "boolean" &&
+                          backgroundImageOpacity
+                        ? 0.5
+                        : 1,
               }}
             >
               <Image

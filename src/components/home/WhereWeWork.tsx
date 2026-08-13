@@ -23,6 +23,7 @@ export default function WhereWeWork() {
                 alt="Fiverr freelancer"
                 width={260}
                 height={320}
+                sizes="(max-width: 768px) 160px, 260px"
                 className="h-full w-auto object-bottom object-contain"
               />
             </div>
@@ -55,6 +56,7 @@ export default function WhereWeWork() {
                 alt="Upwork freelancer"
                 width={260}
                 height={320}
+                sizes="(max-width: 768px) 160px, 260px"
                 className="h-full w-auto object-bottom object-contain"
               />
             </div>

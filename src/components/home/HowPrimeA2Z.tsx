@@ -26,25 +26,96 @@ export default function HowPrimeA2Z({
 
   return (
     <section className="relative">
-      {/* Blue background/content block */}
-      <div className="relative z-10 grid max-w-[90%] grid-cols-1 bg-primary lg:grid-cols-[1fr_45%]">
-        {/* Left: Text content */}
-        <div className="relative overflow-hidden px-6 py-10 sm:px-12 sm:py-12 lg:w-[90%] lg:px-14 lg:py-14">
-          {/* Background radial glow */}
-          <div className="pointer-events-none absolute bottom-[-120px] left-[-80px] h-[420px] w-[520px] rounded-full bg-txt-blue-light opacity-60 blur-[110px]" />
+      {/* ================= DESKTOP VIEW (lg+) ================= */}
+      <div className="hidden lg:block relative">
+        {/* Blue background/content block */}
+        <div className="relative z-10 grid max-w-[90%] grid-cols-1 bg-primary lg:grid-cols-[1fr_45%]">
+          {/* Left: Text content */}
+          <div className="relative overflow-hidden px-6 py-10 sm:px-12 sm:py-12 lg:w-[90%] lg:px-14 lg:py-14">
+            {/* Background radial glow */}
+            <div className="pointer-events-none absolute bottom-[-120px] left-[-80px] h-[420px] w-[520px] rounded-full bg-txt-blue-light opacity-60 blur-[110px]" />
 
-          <div className="relative z-10 max-w-[500px]">
+            <div className="relative z-10 max-w-[500px]">
+              {/* Primary block */}
+              {hasPrimaryBlock && (
+                <div>
+                  {primaryHeading && (
+                    <h2 className="text-h1 font-sans font-bold text-txt-white">
+                      {primaryHeading}
+                    </h2>
+                  )}
+
+                  {primarySubheading && (
+                    <p className="mt-0.5 text-body1 font-sans font-semibold text-txt-white">
+                      {primarySubheading}
+                    </p>
+                  )}
+
+                  {primaryDescriptions.map((desc, i) => (
+                    <p
+                      key={i}
+                      className={`${
+                        i === 0 ? "mt-4" : "mt-3"
+                      } text-caption-lg font-sans leading-[1.6] text-white/85`}
+                    >
+                      {desc}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {/* Secondary block */}
+              {hasSecondaryBlock && (
+                <div className={hasPrimaryBlock ? "mt-8" : undefined}>
+                  {secondaryHeading && (
+                    <h2 className="text-h1 font-sans font-bold text-txt-white">
+                      {secondaryHeading}
+                    </h2>
+                  )}
+
+                  {secondaryDescription && (
+                    <p className="mt-3 text-caption font-sans leading-[1.6] text-white/85">
+                      {secondaryDescription}
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Overlapping Photo */}
+        <div className="absolute right-[0%] top-[3%] z-20 h-full w-[50%]">
+          <div className="relative min-h-[300px] lg:min-h-[480px] lg:mt-15 lg:ml-40 z-20">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-contain object-top"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ================= MOBILE VIEW (< lg) ================= */}
+      <div className="block lg:hidden relative w-full my-8 px-4 sm:px-6">
+        <div className="relative w-full bg-primary rounded-3xl overflow-hidden px-6 py-8 sm:px-8 sm:py-10 shadow-xl">
+          {/* Background radial glow */}
+          <div className="pointer-events-none absolute -bottom-20 -left-20 h-[300px] w-[300px] rounded-full bg-txt-blue-light opacity-50 blur-[90px]" />
+
+          <div className="relative z-10 w-full space-y-6">
             {/* Primary block */}
             {hasPrimaryBlock && (
               <div>
                 {primaryHeading && (
-                  <h2 className="text-h1 font-sans font-bold text-txt-white">
+                  <h2 className="text-[28px] sm:text-[34px] font-sans font-bold text-txt-white leading-tight">
                     {primaryHeading}
                   </h2>
                 )}
 
                 {primarySubheading && (
-                  <p className="mt-0.5 text-body1 font-sans font-semibold text-txt-white">
+                  <p className="mt-1 text-[18px] font-sans font-semibold text-white/90">
                     {primarySubheading}
                   </p>
                 )}
@@ -52,9 +123,7 @@ export default function HowPrimeA2Z({
                 {primaryDescriptions.map((desc, i) => (
                   <p
                     key={i}
-                    className={`${
-                      i === 0 ? "mt-4" : "mt-3"
-                    } text-caption-lg font-sans leading-[1.6] text-white/85`}
+                    className="mt-3 text-[15px] font-sans leading-relaxed text-white/85"
                   >
                     {desc}
                   </p>
@@ -62,46 +131,35 @@ export default function HowPrimeA2Z({
               </div>
             )}
 
-            {/* Secondary block */}
+            {/* CEO / Secondary block */}
             {hasSecondaryBlock && (
-              <div className={hasPrimaryBlock ? "mt-8" : undefined}>
+              <div className="pt-2 border-t border-white/10">
                 {secondaryHeading && (
-                  <h2 className="text-h1 font-sans font-bold text-txt-white">
+                  <h3 className="text-[22px] font-sans font-bold text-txt-white">
                     {secondaryHeading}
-                  </h2>
+                  </h3>
                 )}
 
                 {secondaryDescription && (
-                  <p className="mt-3 text-caption font-sans leading-[1.6] text-white/85">
+                  <p className="mt-2 text-[14px] font-sans leading-relaxed text-white/85">
                     {secondaryDescription}
                   </p>
                 )}
               </div>
             )}
+
+            {/* CEO Mobile Image Container */}
+            <div className="relative w-full h-[280px] sm:h-[360px] mt-4 pt-2">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                sizes="100vw"
+                className="object-contain object-bottom"
+              />
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Right: Overlapping Photo */}
-      <div className="absolute right-[0%] top-[3%] z-20 hidden h-full w-[50%] lg:block">
-        <div className="relative min-h-[300px] lg:min-h-[480px] lg:mt-15 lg:ml-40 z-20">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            className="object-contain object-top"
-          />
-        </div>
-      </div>
-
-      {/* Mobile image */}
-      <div className="relative z-20 block w-full lg:hidden">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="h-auto w-full object-contain"
-        />
       </div>
     </section>
   );
