@@ -17,26 +17,58 @@ const companyLogos: CompanyLogo[] = [
   { name: "Atlas Essentials", src: "/images/brands/Atlas-Essentials.png" },
 ];
 
+
 export default function CompanyWeWorkWithSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-primary-gradient bg-blue-gradient py-20 px-6 sm:px-10">
+    <section className="relative w-full overflow-hidden bg-primary-gradient bg-blue-gradient py-12">
       {/* subtle top border accent */}
       <div className="absolute inset-x-0 top-0 h-[2px] bg-txt-white/80" />
 
-      <div className="relative z-10 mx-auto max-w-[1300px] flex flex-wrap justify-center gap-y-8 gap-x-4">
-        {companyLogos.map((logo) => (
-          <div
-            key={logo.name}
-            className="relative flex h-16 w-[120px] sm:w-[150px] shrink-0 items-center justify-center"
-          >
-            <Image
-              src={logo.src}
-              alt={logo.name}
-              fill
-              className="object-contain object-center p-1"
-            />
+      {/* Premium fade gradient masks on the edges */}
+      <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 sm:w-32 mask-marquee-left" />
+      <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 sm:w-32 mask-marquee-right" />
+
+      <div className="relative w-full overflow-hidden">
+        {/* The marquee parent has display flex and no gap, ensuring seamless translate-50% loop */}
+        <div className="flex animate-marquee">
+          
+          {/* First track */}
+          <div className="flex shrink-0 items-center justify-around gap-12 sm:gap-20 pr-12 sm:pr-20">
+            {companyLogos.map((logo) => (
+              <div
+                key={logo.name}
+                className="relative flex h-14 w-[130px] sm:h-16 sm:w-[160px] shrink-0 items-center justify-center"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  fill
+                  sizes="(max-width: 640px) 130px, 160px"
+                  className="object-contain object-center transition-all duration-300 hover:scale-105 filter brightness-90 hover:brightness-100"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+
+          {/* Second track (identical duplicate) */}
+          <div className="flex shrink-0 items-center justify-around gap-12 sm:gap-20 pr-12 sm:pr-20">
+            {companyLogos.map((logo) => (
+              <div
+                key={`${logo.name}-dup`}
+                className="relative flex h-14 w-[130px] sm:h-16 sm:w-[160px] shrink-0 items-center justify-center"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  fill
+                  sizes="(max-width: 640px) 130px, 160px"
+                  className="object-contain object-center transition-all duration-300 hover:scale-105 filter brightness-90 hover:brightness-100"
+                />
+              </div>
+            ))}
+          </div>
+
+        </div>
       </div>
     </section>
   );

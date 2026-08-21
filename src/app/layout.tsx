@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Sans } from "next/font/google";
+import { Inter, Instrument_Sans, Afacad_Flux } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,14 +19,23 @@ export const metadata: Metadata = {
   description: "Personal portfolio site",
 };
 
+const afacad = Afacad_Flux({
+  variable: "--font-afacad",
+  subsets: ["latin"],
+});
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrumentSans.variable} h-full antialiased`}
+      className={`${inter.variable} ${instrumentSans.variable} ${afacad.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
         <Header />

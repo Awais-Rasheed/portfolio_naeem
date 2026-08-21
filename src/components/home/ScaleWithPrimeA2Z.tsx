@@ -4,22 +4,24 @@ export default function ScaleWithPrimeA2Z() {
   return (
     <section className="relative w-full">
       {/* ================= DESKTOP VIEW (lg+) ================= */}
-      <div className="hidden lg:block relative w-full my-30">
+      <div className="hidden lg:block relative w-full mb-10">
         {/* ── Top: "From Vision To Results" ── */}
-        <div className=" lg:w-[100%] px-6 py-16 text-center sm:px-12">
+        <div className="mx-auto lg:w-[80%] px-6 py-16 text-center sm:px-12">
           <h2 className="text-display font-display font-bold text-txt-primary">
             From Vision To Results
           </h2>
 
           <p className="mx-auto mt-4 max-w-[1186px] text-body1 font-sans leading-relaxed text-txt-secondary">
-            Powered by battle-tested systems and years of omnichannel experience,
-            the Prime A2Z Framework transforms Amazon advertising into a
-            predictable growth engine. Rather than making minor adjustments.
+            Powered by battle-tested systems and years of omnichannel
+            experience, the Prime A2Z Framework transforms Amazon advertising
+            into a predictable growth engine. Rather than making minor
+            adjustments.
           </p>
 
           <p className="mx-auto mt-3 max-w-[1186px] text-body1 font-sans leading-relaxed text-txt-secondary">
-            We apply a strategic, data-backed approach that reduces wasted spend,
-            increases customer acquisition, and accelerates profitable scaling
+            We apply a strategic, data-backed approach that reduces wasted
+            spend, increases customer acquisition, and accelerates profitable
+            scaling
           </p>
 
           <button className="mt-6 btn-success-story">
@@ -57,12 +59,12 @@ export default function ScaleWithPrimeA2Z() {
                   Scale with Prime A2Z Ad Formula
                 </h3>
 
-                <div className="mt-5 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {["7x ROAS", "Low ACOS", "100% ROI", "1st Page Ranking"].map(
                     (badge) => (
                       <span
                         key={badge}
-                        className="card-glass rounded-sm px-4 py-2 text-caption-lg font-sans font-semibold text-txt-white"
+                        className="card-glass rounded-sm p-4 text-caption-lg font-sans font-semibold text-txt-white"
                       >
                         {badge}
                       </span>
@@ -88,14 +90,15 @@ export default function ScaleWithPrimeA2Z() {
           </h2>
 
           <p className="mt-3 text-[15px] font-sans leading-relaxed text-txt-secondary">
-            Powered by battle-tested systems and years of omnichannel experience,
-            the Prime A2Z Framework transforms Amazon advertising into a
-            predictable growth engine.
+            Powered by battle-tested systems and years of omnichannel
+            experience, the Prime A2Z Framework transforms Amazon advertising
+            into a predictable growth engine.
           </p>
 
           <p className="mt-2 text-[15px] font-sans leading-relaxed text-txt-secondary">
-            We apply a strategic, data-backed approach that reduces wasted spend,
-            increases customer acquisition, and accelerates profitable scaling.
+            We apply a strategic, data-backed approach that reduces wasted
+            spend, increases customer acquisition, and accelerates profitable
+            scaling.
           </p>
 
           <div className="mt-6 flex justify-center">

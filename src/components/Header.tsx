@@ -22,7 +22,15 @@ const navLinks = [
       { name: "Study 2", href: "/#case-study-2" },
     ],
   },
-  { name: "Testimonials", href: "/#testimonials" },
+
+  {
+    name: "Testimonials",
+    href: "/#testimonials",
+    dropdown: [
+      { name: "Video Testimonials", href: "/testimonials" },
+      { name: "Written Reviews", href: "/#written-reviews" },
+    ],
+  },
   { name: "About Us", href: "/about-us" },
   { name: "Contact Us", href: "/contact-us" },
 ];
@@ -37,7 +45,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="absolute z-50 left-0 right-0 mx-auto top-[16px] sm:top-[20px] lg:top-[38px] w-[calc(100%-1.5rem)] sm:w-[95%] lg:w-[1251px] max-w-[1251px] h-auto lg:h-[93px] border-[0.1px] border-[#D9D9D9] bg-white/90 lg:bg-primary-light/20 backdrop-blur-md lg:backdrop-blur-lg rounded-[28px] sm:rounded-[56px] flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-0 transition-all duration-300 shadow-sm">
+      <header className="absolute z-50 left-0 right-0 mx-auto top-[16px] sm:top-[20px] lg:top-[38px] w-[calc(100%-1.5rem)] sm:w-[95%] lg:w-[95%] xl:w-[1251px] max-w-[1251px] h-auto lg:h-[93px] border-[0.1px] border-[#D9D9D9] bg-white/90 lg:bg-primary-light/20 backdrop-blur-md lg:backdrop-blur-lg rounded-[28px] sm:rounded-[56px] flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-0 transition-all duration-300 shadow-sm">
         {/* Logo Container */}
         <Link
           href="/"

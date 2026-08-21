@@ -46,7 +46,7 @@ export default function Footer() {
               <Image
                 src="/images/png/logo.png"
                 alt="Naeem Logo"
-                width={165}
+                width={250}
                 height={70}
                 className="object-contain brightness-0 invert"
               />
@@ -67,11 +67,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 flex flex-col gap-5 border-t border-white/5 pt-8 text-caption sm:flex-row sm:items-center sm:justify-between lg:mt-8">
+        <div className="mt-12 flex flex-col gap-5 border-t border-white/5 pt-8 text-caption sm:flex-row sm:items-center sm:justify-center lg:mt-8">
           <p className="text-white/90">PrimeA2Z © 2026 | All Rights Reserved</p>
-          <p className="text-white/90">
-            Designed by <span className="text-white/40">Amna Imran</span>
-          </p>
         </div>
       </div>
     </footer>

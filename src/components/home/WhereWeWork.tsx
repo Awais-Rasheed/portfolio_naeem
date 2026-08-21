@@ -13,11 +13,11 @@ export default function WhereWeWork() {
         </h2>
 
         {/* Two-panel grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 mt-6 md:h-[350px]">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 mt-6 md:h-[250px]">
           {/* Fiverr panel */}
-          <div className="relative flex flex-col justify-end pt-8 pb-6 px-6 sm:px-10 md:border-r md:border-txt-white/60 min-h-[240px] md:min-h-0">
+          <div className="relative flex flex-col justify-end pt-8 pb-6 px-6 sm:px-10 md:border-r md:border-white min-h-[240px] md:min-h-0">
             {/* Person image */}
-            <div className="absolute right-4 bottom-0 z-[1] h-[200px] md:h-[320px] w-auto">
+            <div className="absolute right-4 bottom-[-60px] z-[1] h-[200px] md:h-[320px] w-auto">
               <Image
                 src="/images/png/fiverr.png"
                 alt="Fiverr freelancer"
@@ -29,7 +29,7 @@ export default function WhereWeWork() {
             </div>
 
             {/* Text */}
-            <div className="relative z-10">
+            <div className="relative z-10 bottom-10">
               <h3 className="text-h1 font-sans font-extrabold leading-none text-txt-white">
                 FIVERR<span className="text-[#1DBF73]">.</span>
               </h3>
@@ -50,7 +50,7 @@ export default function WhereWeWork() {
           {/* Upwork panel */}
           <div className="relative flex flex-col justify-end pt-8 pb-6 px-6 sm:px-10 min-h-[240px] md:min-h-0 border-t border-txt-white/30 md:border-t-0">
             {/* Person image */}
-            <div className="absolute right-4 bottom-0 z-[1] h-[200px] md:h-[320px] w-auto">
+            <div className="absolute left-90 top-0 z-[1] h-[200px] md:h-[320px] w-auto">
               <Image
                 src="/images/png/upwork.png"
                 alt="Upwork freelancer"
@@ -62,7 +62,7 @@ export default function WhereWeWork() {
             </div>
 
             {/* Text */}
-            <div className="relative z-10">
+            <div className="relative z-10 bottom-10 left-15">
               <h3 className="text-h1 font-sans font-extrabold leading-none text-txt-white">
                 UPWORK
               </h3>

@@ -54,10 +54,10 @@ const featureItems: FeatureItem[] = [
 
 function StatCardItem({ stat }: { stat: StatCard }) {
   return (
-    <div className="group relative overflow-hidden rounded-xl p-[1px]">
+    <div className="h-auto group relative overflow-hidden rounded-xl p-[1px]">
       {/* Glowing border - concentrated at all four edges */}
       <div
-        className="absolute inset-0 rounded-xl"
+        className="h-auto pb-2 absolute inset-0 rounded-xl"
         style={{
           background: `
             linear-gradient(to bottom, rgba(180,195,255,0.3), transparent 40%),
@@ -70,7 +70,7 @@ function StatCardItem({ stat }: { stat: StatCard }) {
 
       {/* Blurred outer glow, still edge-weighted */}
       <div
-        className="absolute -inset-[2px] rounded-xl opacity-70 blur-[6px]"
+        className="h-auto pb-2 absolute -inset-[2px] rounded-xl opacity-70 blur-[6px]"
         style={{
           background: `
             linear-gradient(to bottom, rgba(255,255,255,0.5), transparent 35%),
@@ -82,7 +82,7 @@ function StatCardItem({ stat }: { stat: StatCard }) {
 
       {/* Card body - dark/transparent center, glow fades IN from edges */}
       <div
-        className="relative overflow-hidden rounded-[11px] p-4"
+        className="h-auto relative overflow-hidden rounded-[11px] p-4"
         style={{
           background:
             "radial-gradient(120% 100% at 50% 50%, rgba(15,20,50,0.75) 0%, rgba(35,48,110,0.5) 60%, rgba(90,110,210,0.35) 100%)",
@@ -91,7 +91,7 @@ function StatCardItem({ stat }: { stat: StatCard }) {
         }}
       >
         {/* Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 pb-8">
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-white">
             <div className="relative h-4 w-4">
               <Image
@@ -119,8 +119,8 @@ function StatCardItem({ stat }: { stat: StatCard }) {
 function FeatureRow({ feature }: { feature: FeatureItem }) {
   return (
     <div className="flex gap-4">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white">
-        <div className="relative h-6 w-6">
+      <div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white">
+        <div className="relative h-9 w-9">
           <Image
             src={feature.icon}
             alt={feature.title}
@@ -130,10 +130,10 @@ function FeatureRow({ feature }: { feature: FeatureItem }) {
         </div>
       </div>
       <div>
-        <h4 className="font-sans text-[16px] font-semibold text-white">
+        <h4 className="font-sans text-[26px] font-semibold text-white">
           {feature.title}
         </h4>
-        <p className="mt-1 font-sans text-[14px] leading-relaxed text-white/60">
+        <p className="mt-1 font-sans text-[22px] leading-relaxed text-white/60">
           {feature.description}
         </p>
       </div>
@@ -278,7 +278,7 @@ export default function PerformanceDrivenSection() {
             <br />
             Result Proven.
           </h2>
-          <p className="mt-4 max-w-[420px] font-sans text-[15px] leading-relaxed text-white/60">
+          <p className="mt-4 max-w-[520px] font-sans text-[22px] leading-relaxed text-white/60">
             We turn data into decisions and strategies into measurable growth
             for your brand.
           </p>

@@ -64,31 +64,24 @@ export const caseStudyGroups: CaseStudyGroup[] = [
 
 export function StatCardItem({ stat }: { stat: StatCard }) {
   return (
-    <div className="card-white rounded-xl px-6 py-6">
-      <div className="flex items-start justify-between">
-        <span className="text-card-title font-sans text-txt-secondary">
-          {stat.index}
-        </span>
-        <div className="relative">
-          <div
-            className="absolute opacity-100"
-            style={{
-              width: "143px",
-              height: "109px",
-              top: "-20px",
-              right: "-25px",
-            }}
-          >
-            <Image src={stat.icon} alt="" fill className="object-contain" />
-          </div>
-        </div>
-      </div>
-      <p className="mt-4 text-card-title-lg font-sans text-txt-primary sm:text-[32px]">
-        {stat.value}
-      </p>
-      <p className="mt-1.5 text-body1 font-sans text-txt-secondary">
-        {stat.label}
-      </p>
+    <div className="stat-card">
+      {/* Index */}
+      <span className="stat-card-index">{stat.index}</span>
+
+      {/* Icon */}
+      <Image
+        src={stat.icon}
+        alt=""
+        width={80}
+        height={70}
+        className="stat-card-icon"
+      />
+
+      {/* Value */}
+      <p className="stat-card-value">{stat.value}</p>
+
+      {/* Label */}
+      <p className="stat-card-label">{stat.label}</p>
     </div>
   );
 }

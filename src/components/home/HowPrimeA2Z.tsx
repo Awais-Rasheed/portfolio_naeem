@@ -29,13 +29,13 @@ export default function HowPrimeA2Z({
       {/* ================= DESKTOP VIEW (lg+) ================= */}
       <div className="hidden lg:block relative">
         {/* Blue background/content block */}
-        <div className="relative z-10 grid max-w-[90%] grid-cols-1 bg-primary lg:grid-cols-[1fr_45%]">
+        <div className="relative z-10 grid max-w-[90%] grid-cols-1 bg-primary bg-blue-gradient lg:grid-cols-[1fr_45%]">
           {/* Left: Text content */}
           <div className="relative overflow-hidden px-6 py-10 sm:px-12 sm:py-12 lg:w-[90%] lg:px-14 lg:py-14">
             {/* Background radial glow */}
             <div className="pointer-events-none absolute bottom-[-120px] left-[-80px] h-[420px] w-[520px] rounded-full bg-txt-blue-light opacity-60 blur-[110px]" />
 
-            <div className="relative z-10 max-w-[500px]">
+            <div className="relative z-10 max-w-[500px] pb-10">
               {/* Primary block */}
               {hasPrimaryBlock && (
                 <div>
@@ -55,7 +55,7 @@ export default function HowPrimeA2Z({
                     <p
                       key={i}
                       className={`${
-                        i === 0 ? "mt-4" : "mt-3"
+                        i === 0 ? "mt-4" : "mt-7"
                       } text-caption-lg font-sans leading-[1.6] text-white/85`}
                     >
                       {desc}

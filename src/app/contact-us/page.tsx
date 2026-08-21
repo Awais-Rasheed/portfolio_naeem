@@ -22,7 +22,21 @@ export default function ContactUsPage() {
         backgroundImageOpacity={1}
         overlayOpacity={0.5}
       />
-      <div className="mb-6"></div>
+
+      <div className="my-10 flex w-full max-w-full flex-col gap-4 px-6 sm:flex-row sm:justify-between sm:px-10">
+        {" "}
+        <div className="w-full sm:w-[55%]">
+          <h2 className="text-2xl sm:text-display font-display font-bold">
+            We're Here to Help
+          </h2>
+        </div>
+        <div className="w-full sm:w-[40%]">
+          <p className="text-body1 text-txt-secondary leading-relaxed">
+            We’d love to hear from you. Reach out to us for inquiries, support,
+            or project discussions.
+          </p>
+        </div>
+      </div>
 
       {/* Main Contact Section matching user's design image */}
       <ContactSection />

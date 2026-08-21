@@ -64,7 +64,7 @@ export default function AboutUsPage() {
           potential.
         </p>
 
-        <button className="mt-6 btn-success-story">
+        <button className="mt-6 mb-6 font-[12px] btn-success-story">
           Let’s Grow Your Business
         </button>
       </div>

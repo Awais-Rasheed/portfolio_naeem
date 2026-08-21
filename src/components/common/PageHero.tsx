@@ -75,7 +75,7 @@ export default function PageHero({
   };
 
   return (
-    <section className="relative overflow-hidden bg-primary-dark bg-blue-gradient min-h-[420px] lg:min-h-[480px] flex items-center">
+    <section className="h-[610px] relative overflow-hidden bg-primary-dark bg-blue-gradient min-h-[420px] lg:min-h-[480px] flex items-center">
       {/* Background glow layers & optional image */}
       <div className="pointer-events-none absolute inset-0">
         {/* Default deep-blue background when no background image */}
@@ -147,11 +147,11 @@ export default function PageHero({
             {/* Breadcrumb Navigation */}
 
             {/* Page Title */}
-            <h1 className="font-sans text-3xl font-bold tracking-tight text-txt-white sm:text-4xl lg:text-[52px] lg:leading-[1.15]">
+            <h1 className="mt-20 font-sans text-3xl font-bold tracking-tight text-txt-white sm:text-4xl lg:text-[52px] lg:leading-[1.15]">
               {title}
             </h1>
 
-            <nav className="mb-4 flex items-center gap-2 text-caption-lg sm:text-caption text-txt-white/70">
+            <nav className="mt-5 mb-4 flex items-center gap-2 text-caption-lg sm:text-caption text-txt-white/70">
               <Link
                 href="/"
                 className="font-medium text-[white] transition-colors hover:text-txt-white"

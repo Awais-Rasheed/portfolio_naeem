@@ -50,68 +50,82 @@ const faqs: FAQItem[] = [
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+  const toggle = (i: number) => {
+    setOpenIndex(openIndex === i ? null : i);
+  };
 
   return (
-    <section className="mb-20 mt-30 relative w-full overflow-hidden bg-primary-dark bg-blue-gradient py-20 px-6 sm:px-12 lg:px-16">
+    <section className="relative mb-20 mt-30 w-full overflow-hidden bg-primary-dark bg-blue-gradient px-6 py-20 sm:px-12 lg:px-16">
       {/* Background glow blobs */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-120px] top-[-80px] h-[500px] w-[500px] rounded-full bg-[#0E3388] opacity-30 blur-[130px]" />
+
         <div className="absolute bottom-[-100px] right-[-80px] h-[400px] w-[500px] rounded-full bg-[#001D60] opacity-40 blur-[120px]" />
+
         <div className="absolute inset-0 bg-primary-gradient" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[780px]">
-        {/* ── Heading ── */}
-        <h2 className="text-[36px] sm:text-display mb-14 text-center font-display font-bold text-txt-white">
+        {/* Heading */}
+        <h2 className="mb-14 text-center font-display text-[36px] font-bold text-txt-white sm:text-display">
           Questions?
           <br />
           We&apos;re Here To Help.
         </h2>
 
-        {/* ── Accordion list ── */}
+        {/* Accordion */}
         <div className="flex flex-col gap-3">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
+
             return (
               <div
                 key={faq.index}
-                className="faq-card overflow-hidden rounded-2xl border border-white/10 transition-all duration-300"
+                className="overflow-hidden rounded-xl border transition-all duration-100"
                 style={{
-                  background: "rgba(255,255,255,0.2)",
-                  backdropFilter: "blur(12px)",
-                  WebkitBackdropFilter: "blur(12px)",
-                  borderColor: isOpen
-                    ? "rgba(255,255,255,0.20)"
-                    : "rgba(255,255,255,0.10)",
+                  background: `
+      radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.05) 20%,
+        rgba(0, 0, 0, 0.35) 100%
+      ),
+      radial-gradient(
+        ellipse at bottom center,
+        rgba(0, 29, 96, 0.55) 0%,
+        rgba(0, 29, 96, 0.25) 35%,
+        transparent 70%
+      ),
+      rgba(0, 0, 0, 0.30)
+    `,
+                  borderColor: "rgba(255, 255, 255, 0.25)",
+                  boxShadow: `
+      inset 0 0 80px rgba(255, 255, 255, 0.40),
+      inset 0 -20px 50px rgba(0, 29, 96, 0.45)
+    `,
                 }}
               >
-                {/* ── Row header (always visible) ── */}
+                {/* Header */}
                 <button
                   id={`faq-btn-${i}`}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                   onClick={() => toggle(i)}
-                  className="flex w-full items-center gap-6 px-6 py-5 text-left transition-colors duration-200 hover:bg-white/5"
+                  className="flex w-full items-center gap-6 px-6 py-6 text-left"
                 >
                   {/* Index */}
-                  <span
-                    className="w-12 shrink-0 text-caption font-sans font-semibold"
-                    style={{ color: "rgba(255,255,255,0.45)" }}
-                  >
+                  <span className="w-12 shrink-0 text-[20px] font-sans font-semibold text-white">
                     {faq.index}
                   </span>
 
                   {/* Question */}
-                  <span className="flex-1 text-caption-lg font-sans font-semibold text-txt-white">
+                  <span className="flex-1 text-[20px] font-sans font-semibold leading-tight text-white sm:text-[22px]">
                     {faq.question}
                   </span>
 
                   {/* Chevron */}
                   <span
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-transform duration-300"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300"
                     style={{
-                      background: "rgba(255,255,255,0.10)",
                       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                     }}
                   >
@@ -133,7 +147,7 @@ export default function FAQSection() {
                   </span>
                 </button>
 
-                {/* ── Answer (animated) ── */}
+                {/* Answer */}
                 <div
                   id={`faq-answer-${i}`}
                   role="region"
@@ -145,10 +159,7 @@ export default function FAQSection() {
                   }}
                 >
                   <div className="overflow-hidden">
-                    <p
-                      className="px-6 pb-6 pt-1 text-caption font-sans leading-[1.7]"
-                      style={{ color: "rgba(255,255,255,0.72)" }}
-                    >
+                    <p className="px-6 pb-7 pt-0 text-[18px] font-sans leading-[1.75] text-white/90 sm:text-[20px]">
                       {faq.answer}
                     </p>
                   </div>

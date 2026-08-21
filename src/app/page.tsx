@@ -25,14 +25,14 @@ export default function Home() {
         </div>
 
         {/* Hero content — padding-top accounts for fixed header */}
-        <div className="relative z-10 mx-auto flex min-h-[600px] sm:min-h-[720px] max-w-[1440px] items-center px-6 pb-10 pt-[130px] sm:px-10 sm:pt-[172px] lg:px-16 lg:pt-[180px]">
-          <div className="max-w-[580px]">
-            <h1 className="text-[32px] leading-tight font-sans font-bold text-txt-white sm:text-[48px] lg:text-display lg:font-display">
+        <div className="relative z-10 mx-auto flex min-h-[600px] sm:min-h-[610px] max-w-[1440px] items-center px-6  pt-[130px] sm:px-10 sm:pt-[172px] lg:px-16 lg:pt-[180px]">
+          <div className="max-w-[780px]">
+            <h1 className="text-[30px] leading-tight font-sans font-bold text-txt-white sm:text-[48px] lg:text-display lg:font-display">
               Transform&nbsp;Underperforming
               <br />
-              Ads&nbsp;&amp;&nbsp;Creatives Into
+              Ads&nbsp;&amp;&nbsp;Creatives Into High-Yield
               <br />
-              High-Yield&nbsp;Revenue.
+              &nbsp;Revenue.
             </h1>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
 
         {/* Shopping cart image */}
-        <div className="pointer-events-none absolute bottom-0 right-0 z-[1] hidden sm:block w-[55%] max-w-[800px] lg:w-[50%]">
+        <div className="pointer-events-none absolute bottom-0 right-0 z-[1] hidden sm:block w-[42%] max-w-[600px] lg:w-[40%]">
           <Image
             src="/images/png/cart_1.png"
             alt="Amazon shopping cart"
@@ -59,11 +59,11 @@ export default function Home() {
 
       {/* ================= INTRO / EXPERIENCE STRIP ================= */}
       <section className="relative w-full overflow-hidden bg-primary-light">
-          <div className="mx-auto flex min-h-[258px] max-w-[1140px] items-center px-6 py-12 sm:px-10 lg:px-24">
+        <div className="mx-auto flex min-h-[258px] max-w-[1140px] items-center px-6 py-12 sm:px-10 lg:px-24">
           <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[180px_1fr] lg:gap-12">
             {/* 6+ Years */}
             <div className="text-center md:pr-10 md:text-left">
-              <div className="font-display text-[60px] sm:text-[108px] font-bold leading-none tracking-[-2px] sm:tracking-[-4px] text-txt-primary">
+              <div className="font-code text-[60px] sm:text-[108px] font-bold leading-none tracking-[-2px] sm:tracking-[-4px]">
                 6+
               </div>
               <div className="text-[18px] sm:text-[28px] font-semibold tracking-[0.1em] text-txt-secondary">
