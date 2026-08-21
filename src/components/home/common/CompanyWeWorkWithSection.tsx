@@ -37,13 +37,13 @@ export default function CompanyWeWorkWithSection() {
             {companyLogos.map((logo) => (
               <div
                 key={logo.name}
-                className="relative flex h-14 w-[130px] sm:h-16 sm:w-[160px] shrink-0 items-center justify-center"
+                className="relative flex h-20 w-[180px] sm:h-24 sm:w-[220px] shrink-0 items-center justify-center"
               >
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   fill
-                  sizes="(max-width: 640px) 130px, 160px"
+                  sizes="(max-width: 640px) 180px, 220px"
                   className="object-contain object-center transition-all duration-300 hover:scale-105 filter brightness-90 hover:brightness-100"
                 />
               </div>
@@ -55,13 +55,13 @@ export default function CompanyWeWorkWithSection() {
             {companyLogos.map((logo) => (
               <div
                 key={`${logo.name}-dup`}
-                className="relative flex h-14 w-[130px] sm:h-16 sm:w-[160px] shrink-0 items-center justify-center"
+                className="relative flex h-20 w-[180px] sm:h-24 sm:w-[220px] shrink-0 items-center justify-center"
               >
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   fill
-                  sizes="(max-width: 640px) 130px, 160px"
+                  sizes="(max-width: 640px) 180px, 220px"
                   className="object-contain object-center transition-all duration-300 hover:scale-105 filter brightness-90 hover:brightness-100"
                 />
               </div>

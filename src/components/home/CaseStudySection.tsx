@@ -1,4 +1,8 @@
-import { caseStudyGroups, CaseStudyGroup, StatCardItem } from "./common/StatCard";
+import {
+  caseStudyGroups,
+  CaseStudyGroup,
+  StatCardItem,
+} from "./common/StatCard";
 
 export { caseStudyGroups };
 
@@ -12,7 +16,7 @@ export function CaseStudyRow({ group }: { group: CaseStudyGroup }) {
         Services &nbsp;»&nbsp; {group.category}
       </p>
 
-      <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+      <div className="mt-6 w-[90%] mx-auto grid grid-cols-1 gap-5 sm:grid-cols-3">
         {group.stats.map((stat) => (
           <StatCardItem key={stat.index} stat={stat} />
         ))}

@@ -6,9 +6,7 @@ import CompanyWeWorkWithSection from "./common/CompanyWeWorkWithSection";
 export default function SuccessStories() {
   return (
     <>
-      <section
-        className="mb-30 relative w-full overflow-hidden bg-primary bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16"
-      >
+      <section className="mb-30 relative w-full overflow-hidden bg-primary bg-blue-gradient px-6 py-16 sm:px-12 lg:px-16">
         <div className="pointer-events-none absolute -right-20 top-10 h-[400px] w-[500px] rounded-full bg-txt-blue-light opacity-40 blur-[110px]" />
 
         {/* ── Header ── */}
